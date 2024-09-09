@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blog - Jaguar News</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <body>
+      <%= form_with(model: post) do |form| %>
+        <% if post.errors.any? %>
+          <div style="color: red">
+            <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+            <ul>
+              <% post.errors.each do |error| %>
+                <li><%= error.full_message %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+        <br>
+        <div align='center'>
+          <h4>
+            <%= form.label :titulo, style: "display: block" %>
+          </h4>
+          <br>
+          <%= form.text_field :titulo %>
+        </div>
+        <br>
+        <div align='center'>
+          <h4>
+            <%= form.label :conteudo %>
+          </h4>
+          <br>
+          <%= form.text_area :conteudo %>
+        </div>
+        <br>
+        <div align='center'>
+          <%= form.label :data, style: "display: block" %>
+          <%= form.date_field :data %>
+        </div>
+        <br>
+        <div align='center'>
+            <%= form.submit "Postar" %>
+        </div>
+      <% end %>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+
+
+
