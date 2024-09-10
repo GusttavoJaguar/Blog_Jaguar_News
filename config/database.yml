@@ -1,16 +1,20 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  pool: 5
+  username: your_db_username
+  password: your_db_password
+  host: localhost
+  port: 5432
 
 development:
   <<: *default
-  database: blog_development
+  database: blog_jaguar_development
 
 test:
   <<: *default
-  database: blog_test
+  database: blog_jaguar_test
 
 production:
-  url: <%= ENV['DATABASE_URL'] %>
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  <<: *default
+  database: blog_jaguar_production
