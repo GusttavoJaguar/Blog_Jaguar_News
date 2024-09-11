@@ -6,8 +6,8 @@ Rails.application.routes.draw do
   # Can be used by load balancers and uptime monitors to verify that the app is live.
 
 
-  get "teste/index"
-  get 'teste', to: 'teste#index'
+  get "posts/index"
+  get 'posts', to: 'teste#index'
 
   # Defines the root path route ("/")
   # root "posts#index"
