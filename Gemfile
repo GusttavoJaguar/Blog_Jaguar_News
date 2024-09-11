@@ -47,7 +47,9 @@ group :development, :test do
   gem "debug", platforms: %i[ mri windows ]
   # Use sqlite3 as the database for Active Record
 
-
+  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'rspec-rails', '~> 5.0', '>= 5.0.2'
+  gem 'sqlite3', '>= 1.4'
 end
 
 group :development do
