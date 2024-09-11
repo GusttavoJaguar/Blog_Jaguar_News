@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   # Define a rota raiz para o index do controlador Posts
-  root "posts#index"
+  root "post#index"
   resources :posts
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
