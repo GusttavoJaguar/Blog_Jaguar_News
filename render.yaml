@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: Blog Jaguar News
+    env: ruby
+    buildCommand: "bundle install && yarn install && bundle exec rake assets:precompile"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    plan: free
+    region: oregon
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: blog_jaguar_news_db
+          property: connectionString
+databases:
+  - name: blog_jaguar_news_db
+    plan: free
+    region: oregon
+    postgresVersion: 14
