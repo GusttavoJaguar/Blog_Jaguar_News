@@ -7,7 +7,7 @@ ruby '3.3.2'
 gem 'redis', '~> 5.3' # Atualize para uma versão conhecida
 
 # Gems for the application
-gem 'puma', '~> 5.6'
+gem 'puma', '>= 6.0'
 gem 'sass-rails', '~> 6.0.0'
 gem 'importmap-rails'
 gem 'turbo-rails'
