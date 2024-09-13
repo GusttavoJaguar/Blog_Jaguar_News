@@ -17,7 +17,8 @@ gem 'pg', '~> 1.2'
 gem 'bcrypt', '~> 3.1.7'
 gem 'activestorage'
 gem 'rails', '~> 7.2.1'
-
+gem 'tzinfo-data'
+gem 'tzinfo-data'
 # Gems for development and test
 group :development, :test do
   gem 'sqlite3', '~> 1.5'
