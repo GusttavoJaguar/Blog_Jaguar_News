@@ -41,5 +41,5 @@ end
 # Gems for development
 group :development do
   gem 'dotenv-rails', '~> 2.7'
-  gem 'bootsnap', '1.7.6', require: false
+  gem 'bootsnap', '>= 1.4.4', require: false
 end
