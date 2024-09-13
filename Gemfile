@@ -7,7 +7,7 @@ ruby '3.3.2'
 gem 'redis', '~> 5.3' # Atualize para uma versão conhecida
 
 # Gems for the application
-gem 'puma', '>= 6.0'
+gem 'puma', '~> 6.4.2'
 gem 'sass-rails', '~> 6.0.0'
 gem 'importmap-rails'
 gem 'turbo-rails'
@@ -16,11 +16,11 @@ gem 'jbuilder', '~> 2.0'
 gem 'pg', '~> 1.2'
 gem 'bcrypt', '~> 3.1.7'
 gem 'activestorage'
-
+gem 'rails', '~> 7.2.1'
 
 # Gems for development and test
 group :development, :test do
-  gem 'sqlite3', '~> 1.4'
+  gem 'sqlite3', '~> 1.5'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'web-console', '>= 4.1.0'
   gem 'listen', '~> 3.0'
