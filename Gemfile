@@ -15,6 +15,8 @@ gem 'stimulus-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'pg', '~> 1.2'
 gem 'bcrypt', '~> 3.1.7'
+gem 'activestorage'
+
 
 # Gems for development and test
 group :development, :test do
