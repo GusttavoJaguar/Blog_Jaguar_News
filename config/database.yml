@@ -1,24 +1,17 @@
 default: &default
-  adapter: postgresql
-  encoding: unicode
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  adapter: sqlite3
+  pool: 5
+  timeout: 5000
 
 development:
   <<: *default
-  database: blog_jaguar_news_development
-  username: root
-  password: ""
-  host: 127.0.0.1
-  port: 5432
+  database: db/development.sqlite3
 
 test:
   <<: *default
-  database: storage/test.sqlite3
+  database: db/test.sqlite3
 
 production:
   <<: *default
-  database: blog_jaguar_news_production
-  username: <%= ENV['DATABASE_USERNAME'] %>
-  password: <%= ENV['DATABASE_PASSWORD'] %>
-  host: <%= ENV['DATABASE_HOST'] %>
-  port: <%= ENV.fetch("DATABASE_PORT") { 5432 } %>
+  database: db/production.sqlite3
+  adapter: sqlite3
