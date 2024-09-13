@@ -1,21 +1,19 @@
-# Gemfile
 source 'https://rubygems.org'
 
 # Ruby version
 ruby '3.3.2'
 
 # Rails
-gem 'rails', '~> 7.1.4'
+gem 'redis', '~> 5.3' # Atualize para uma versão conhecida
 
 # Gems for the application
 gem 'puma', '~> 5.6'
-gem 'sass-rails', '>= 6'
+gem 'sass-rails', '~> 6.0.0'
 gem 'importmap-rails'
 gem 'turbo-rails'
 gem 'stimulus-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'pg', '~> 1.2'
-gem 'redis', '~> 7.0'
 gem 'bcrypt', '~> 3.1.7'
 
 # Gems for development and test
@@ -30,7 +28,6 @@ end
 
 # Gems for production
 group :production do
-  gem 'pg', '~> 1.2'
   gem 'rails_12factor'
 end
 
