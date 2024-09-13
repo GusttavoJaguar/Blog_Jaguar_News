@@ -1,41 +1,47 @@
-source "https://rubygems.org"
+# Gemfile
+source 'https://rubygems.org'
 
-ruby "3.3.2"
+# Ruby version
+ruby '3.3.2'
 
-gem "rails", "~> 7.1.4"
+# Rails
+gem 'rails', '~> 7.1.4'
 
-gem "sprockets-rails"
-gem "puma", ">= 5.0"
-gem "importmap-rails"
-gem "turbo-rails"
-gem "stimulus-rails"
-gem "jbuilder"
-gem "tzinfo-data", platforms: %i[windows jruby]
-gem "bootsnap", require: false
+# Gems for the application
+gem 'puma', '~> 5.6'
+gem 'sass-rails', '>= 6'
+gem 'importmap-rails'
+gem 'turbo-rails'
+gem 'stimulus-rails'
+gem 'jbuilder', '~> 2.0'
+gem 'pg', '~> 1.2'
+gem 'redis', '~> 7.0'
+gem 'bcrypt', '~> 3.1.7'
 
-# Uncomment if you need image processing
-# gem "image_processing", "~> 1.2"
-
+# Gems for development and test
 group :development, :test do
-  gem "debug", platforms: %i[mri windows]
-  gem "sqlite3", "~> 1.5"
-  gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
-  gem "rspec-rails", "~> 5.0", ">= 5.0.2"
+  gem 'sqlite3', '~> 1.4'
+  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'web-console', '>= 4.1.0'
+  gem 'listen', '~> 3.0'
+  gem 'spring'
+  gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
-group :development do
-  gem "web-console"
-  # Uncomment if you need performance profiling
-  # gem "rack-mini-profiler"
-  # Uncomment if you need faster commands
-  # gem "spring"
-end
-
-group :test do
-  gem "capybara"
-  gem "selenium-webdriver"
-end
-
+# Gems for production
 group :production do
-  gem "pg", "~> 1.2"  # PostgreSQL for production
+  gem 'pg', '~> 1.2'
+  gem 'rails_12factor'
+end
+
+# Gems for testing
+group :test do
+  gem 'capybara', '>= 3.35'
+  gem 'selenium-webdriver'
+  gem 'chromedriver-helper'
+end
+
+# Gems for development
+group :development do
+  gem 'dotenv-rails', '~> 2.7'
 end
