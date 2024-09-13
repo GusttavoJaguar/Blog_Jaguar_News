@@ -26,22 +26,13 @@ group :development, :test do
   gem 'listen', '~> 3.0'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-end
-
-# Gems for production
-group :production do
-  gem 'pg', '~> 1.2'
-  gem 'rails_12factor'
-end
-
-# Gems for testing
-group :test do
+  gem 'dotenv-rails', '~> 2.7'
   gem 'capybara', '>= 3.35'
   gem 'selenium-webdriver'
   gem 'chromedriver-helper'
 end
 
-# Gems for development
-group :development do
-  gem 'dotenv-rails', '~> 2.7'
+# Gems for production
+group :production do
+  gem 'rails_12factor'
 end
