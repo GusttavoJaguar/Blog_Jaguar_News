@@ -302,7 +302,7 @@ DEPENDENCIES
   selenium-webdriver
   spring
   spring-watcher-listen (~> 2.0.0)
-  sqlite3 (~> 1.5)
+  sqlite3 (~> 1.7)
   stimulus-rails
   turbo-rails
   tzinfo-data
