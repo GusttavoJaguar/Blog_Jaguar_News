@@ -14,7 +14,7 @@ gem 'activestorage'
 gem 'tzinfo-data'
 
 group :development, :test do
-  gem 'sqlite3', '~> 1.7'
+  gem 'pg', '~> 1.2'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'web-console', '>= 4.1.0'
   gem 'listen', '~> 3.0'
