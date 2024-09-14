@@ -20,7 +20,7 @@ gem 'tzinfo-data'
 
 # Gems for development and test
 group :development, :test do
-  gem 'sqlite3', '~> 1.5'
+  gem 'sqlite3', '~> 1.3'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'web-console', '>= 4.1.0'
   gem 'listen', '~> 3.0'
