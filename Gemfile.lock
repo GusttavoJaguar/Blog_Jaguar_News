@@ -208,10 +208,6 @@ GEM
       ffi (~> 1.0)
     rdoc (6.7.0)
       psych (>= 4.0.0)
-    redis (5.3.0)
-      redis-client (>= 0.22.0)
-    redis-client (0.22.2)
-      connection_pool
     regexp_parser (2.9.2)
     reline (0.5.10)
       io-console (~> 0.5)
@@ -294,12 +290,11 @@ DEPENDENCIES
   puma (~> 6.4.2)
   rails (~> 7.2.1)
   rails_12factor
-  redis (~> 5.3)
   sass-rails (~> 6.0.0)
   selenium-webdriver
   spring
   spring-watcher-listen (~> 2.0.0)
-  sqlite3 (~> 1.6)
+  sqlite3 (~> 1.7)
   stimulus-rails
   turbo-rails
   tzinfo-data
