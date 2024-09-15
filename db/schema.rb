@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_09_01_035429) do
+ActiveRecord::Schema[7.2].define(version: 2024_09_15_150541) do
+  create_table "comentarios", force: :cascade do |t|
+    t.integer "post_id", null: false
+    t.text "texto_comentario"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["post_id", "id"], name: "index_comentarios_on_post_id"
+  end
+
   create_table "posts", force: :cascade do |t|
     t.string "titulo"
     t.text "conteudo"
@@ -19,4 +27,5 @@ ActiveRecord::Schema[7.1].define(version: 2024_09_01_035429) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "comentarios", "posts"
 end
