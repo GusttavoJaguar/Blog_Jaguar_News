@@ -12,9 +12,11 @@ gem 'jbuilder', '~> 2.0'
 gem 'bcrypt', '~> 3.1.7'
 gem 'activestorage'
 gem 'tzinfo-data'
+gem 'sqlite3', '~> 1.6'
+
+
 
 group :development, :test do
-  gem 'sqlite3', '~> 1.6'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'web-console', '>= 4.1.0'
   gem 'listen', '~> 3.0'
