@@ -21,9 +21,9 @@
     <div id="posts">
       <% @posts.each do |post| %>
         <%= render post %>
-        <p align='center'>
+        <button type="button" class="btn btn-outline-primary m-2" align='center'>
           <%= link_to "Editar", post %>
-        </p>
+        </button>
         <hr/>
       <% end %>
       
