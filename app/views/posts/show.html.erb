@@ -19,9 +19,13 @@
       <%= render @post %>
 
       <div align='center'>
-        <%= link_to "Editar esse post", edit_post_path(@post) %> |
+        <button type="button" class="btn btn-outline-primary m-2">
+          <%= link_to "Editar esse post", edit_post_path(@post) %> 
+        </button>
         
-        <%= link_to "Voltar ao início", posts_path %>
+        <button type="button" class="btn btn-outline-primary m-2">
+          <%= link_to "Voltar ao início", posts_path %>
+        </button>
         <br>
         <hr/>
         <div align='center'>
