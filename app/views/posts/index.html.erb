@@ -27,14 +27,16 @@
           </button>
         </div>
         <br>
+        
+        </div>
+        <hr/>
+          
         <div align='center'>
         <!-- Botão para adicionar comentário -->
           <button type="button" class="btn btn-outline-primary m-2">
             <%= link_to "Adicionar Comentário", new_post_comentario_path(post) %>
           </button>
-        </div>
-        <hr/>
-
+        <br><br>
         <!-- Exibindo os comentários de cada post -->
         <h3 align="center">Comentário</h3>
         <% if post.comentarios.any? %>
