@@ -18,7 +18,7 @@
   <h3 class="form-group p-4">Adicionar comentário para: '<%= @post.titulo %>.'</h3>
   <%= form_with(model: [@post, @comentario], local: true) do |form| %>
   <br>
-    <div class="form-group p-4" align="center"'>
+    <div class="form-group p-4" align="center">
       <%= form.label :texto_comentario, "Seu comentário" %>
       <br><br>
       <%= form.text_area :texto_comentario, class: "form-control" %>
